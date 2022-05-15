@@ -10,7 +10,7 @@ const Container = styled.main`
     gap: 20px;
     justify-content: space-around;
     color: var(--color-text);
-    margin-top:-40px;
+    margin-top:-30px;
 `
 
 export {

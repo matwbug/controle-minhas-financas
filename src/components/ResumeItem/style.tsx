@@ -8,7 +8,7 @@ export const BoxResume = styled.div`
     border-radius: 5px;
     padding: 5px 15px;
     min-width: 100px;
-    width: 200px;
+    width: 250px;
     color:black;
 
     p{font-size: 25px;}
@@ -37,9 +37,19 @@ export const ResumeHead = styled.header`
 
 export const ResumeHeadTitle = styled.p`
     font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+
+    svg{
+        margin: 0 3px;
+    }
 `
 
 export const Total = styled.span`
     font-size: 30px;
-    font-weight: bold;
+    font-weight: 200;
+    margin: 10px 0;
+    opacity: 70%;
 `
