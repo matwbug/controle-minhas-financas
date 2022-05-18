@@ -39,5 +39,17 @@ export const RadioGroup = styled.div`
         margin-left: 20px;
         accent-color: black;
         margin-top: 0;
+        margin-right:3px;
     }
+`
+
+export const Button = styled.button`
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    background-color: var(--color-primary);
+    gap: 10px;
+    margin: 0 10px;
 `
