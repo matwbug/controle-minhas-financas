@@ -52,8 +52,8 @@ export default function Home(){
     return(
         <>
             <Container>
-                <ResumeItem title="Entradas" icone={BsArrowUpCircle} value={income} color="green"/>
-                <ResumeItem title="Saídas" icone={BsArrowDownCircle} value={expense} color="red"/>
+                <ResumeItem title="Entradas" icone={BsArrowDownCircle} value={income} color="green"/>
+                <ResumeItem title="Saídas" icone={BsArrowUpCircle} value={expense} color="red"/>
                 <ResumeItem title="Total" icone={AiOutlineDollarCircle} value={total} />
             </Container>
             <Container>

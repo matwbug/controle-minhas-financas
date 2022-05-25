@@ -1,10 +1,28 @@
 import React, {useState} from "react";
 import { Container, InputContent, Label, Input, RadioGroup, Button } from "./style";
 
-export default function Form(){
+interface FormProps{
+    handleAdd : (transation:transactionProps) => void
+}
+interface transactionProps{
+    id: number,
+    desc: string,
+    amount: string,
+    expense: boolean
+}
+
+export default function Form(props: FormProps){
     const [desc, setDesc] = useState('');
     const [amount, setAmount] = useState("");
     const [isExpense, setExpense] = useState(false);
+    const generateId = () => Math.round(Math.random() * 10000);
+
+    const transaction:transactionProps = {
+        id: generateId(),
+        desc: desc,
+        amount: amount,
+        expense: isExpense
+    };
 
     const handleSave = () => {
         if(!desc || !amount){
@@ -15,20 +33,14 @@ export default function Form(){
             alert('Informe um valor válido!')
         }
 
-        const transaction = {
-            id: generateId(),
-            desc: desc,
-            amount: amount,
-            expense: isExpense
-        };
         
-        handleAdd(transaction)
+        
+        props.handleAdd(transaction)
 
         setDesc("")
         setAmount("")
     }
 
-    const generateId = () => Math.round(Math.random() * 10000);
 
     return(
         <Container>
@@ -61,8 +73,4 @@ export default function Form(){
             </RadioGroup>
         </Container>
     )
-}
-
-function handleAdd(transaction: { id: number; desc: string; amount: string; expense: boolean; }) {
-    throw new Error("Function not implemented.");
 }
